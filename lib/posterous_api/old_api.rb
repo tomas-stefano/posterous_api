@@ -4,11 +4,7 @@
 
 module Posterous
   module OldAPI
-    extend self
-    
-    def base_uri
-      @base_uri ||= Posterous.base_uri
-    end
+    include BaseURI
     
     def get_all_sites_uri
       @get_all_sites_uri ||= "#{base_uri}/getsites"

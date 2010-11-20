@@ -1,11 +1,7 @@
 module Posterous
   module NewAPI
-    extend self
-    
-    def base_uri
-      @base_uri ||= Posterous.base_uri
-    end
-    
+    include BaseURI
+
     # The get sites uri to get all the sites from a user
     #
     # Fields:
