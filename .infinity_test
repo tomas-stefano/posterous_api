@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+infinity_test do
+  use :test_framework => :rspec
+end
