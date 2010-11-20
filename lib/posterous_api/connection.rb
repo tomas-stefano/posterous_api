@@ -1,25 +1,21 @@
 module Posterous
   module Connection
     
-    # def get(something)
-      # request(something, :basic_credentials => self.credentials)
-    # end
+    def get(uri, options={})
+      HTTParty.get(uri, { :basic_auth => credentials }.merge(options))
+    end
+        
+    def post(uri, klass=HTTParty)
+      klass.post(something, :basic_auth => credentials)
+    end
     
-    # def post(something)
-      # HTTParty.post(something, self.credentials)
-    # end
-    
-    # def put(something)
-      # HTTParty.put(something, self.credentials)
-    # end
+    def put(something, klass=HTTParty)
+      klass.put(something, :basic_auth => credentials)
+    end
 
-    # def delete(something)
-      # HTTParty.delete(something, self.credentials)
-    # end
-    
-    # def request(type, uri)
-    #   HTTParty.send(type, uri)
-    # end
+    def delete(something, klass=HTTParty)
+      klass.delete(something, self.credentials)
+    end
         
   end
 end
