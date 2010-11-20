@@ -3,7 +3,7 @@
 source :rubygems
 
 gem 'httparty', '0.6.1'
-gem 'nokogiri'
+gem 'jeweler'
 
 group :test do
   gem 'rspec', '2.1.0'

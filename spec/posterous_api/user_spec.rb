@@ -58,7 +58,23 @@ module Posterous
       end
       
     end
-    
+
+    describe '#tags_from' do
+      it "should pass to HTTParty the uri and the site id" do
+        mock_tags(user, '126789')
+        user.tags_from(:blog => '126789')
+      end
+    end
+
+    describe '#create_post_for' do
+      
+      it "should call the Httparty get method with the right uri" do
+        mock_create_post(user, :blog => '12345', :title => 'Just the title', :body => 'The body of the post!')
+        user.create_post_for :blog => '12345', :title => 'Just the title', :body => 'The body of the post!'
+      end
+      
+    end
+
     describe '#get' do
       
       it "should get all the blogs from user" do
@@ -66,19 +82,6 @@ module Posterous
         batman.get(batman.get_all_sites_uri).should == 'response'
       end
       
-    end
-    
-    def mock_sites(user)
-      HTTParty.should_receive(:get).with(user.get_all_sites_uri, 
-          :basic_auth => { :username => user.email, :password => user.password
-            }).and_return('response')
-    end
-    
-    def mock_posts(user, blog_id)
-      HTTParty.should_receive(:get).with(user.read_posts_uri, 
-          :basic_auth => { :username => user.email, :password => user.password},
-          :site_id => blog_id
-      ).and_return('response')
     end
     
   end

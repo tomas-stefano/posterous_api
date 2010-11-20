@@ -8,13 +8,18 @@ GEM
       rspec (~> 2.0)
       rspec-instafail (~> 0.1.4)
       ruby-progressbar (~> 0.0.9)
+    git (1.2.5)
     httparty (0.6.1)
       crack (= 0.1.8)
     infinity_test (1.0.2)
       notifiers (>= 1.1.0)
       watchr (>= 0.7)
-    nokogiri (1.4.4)
+    jeweler (1.5.1)
+      bundler (~> 1.0.0)
+      git (>= 1.2.5)
+      rake
     notifiers (1.1.0)
+    rake (0.8.7)
     rspec (2.1.0)
       rspec-core (~> 2.1.0)
       rspec-expectations (~> 2.1.0)
@@ -35,5 +40,5 @@ DEPENDENCIES
   fuubar
   httparty (= 0.6.1)
   infinity_test (= 1.0.2)
-  nokogiri
+  jeweler
   rspec (= 2.1.0)
