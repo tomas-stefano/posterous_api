@@ -1,5 +1,7 @@
 # Posterous API
 
+Posterous API is a extraction from Reblog application (that is not ready in production, but will be =] )
+
 ## Install 
 
     gem install posterous_api
@@ -10,13 +12,13 @@
 
 ## Using
 
-   user = Posterous::User.new('my_user@email.com', 'my_password')
-
-   user.blogs #	=> return all blogs from posterous
-
-   users.posts_from :blog => 'site_id'
-
-   user.tasgs_from :blog => 'site_id'
+    user = Posterous::User.new('my_user@email.com', 'my_password')
+    
+    user.blogs #	=> return all blogs from posterous
+    
+    users.posts_from :blog => 'site_id'
+    
+    user.tasgs_from :blog => 'site_id'
 
 # More Features
 
