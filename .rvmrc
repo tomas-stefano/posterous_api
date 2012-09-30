@@ -1,1 +1,1 @@
-rvm --create 1.9.2@posterous_api
+rvm --create 1.9.3@posterous_api
