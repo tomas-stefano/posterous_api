@@ -1,3 +1,4 @@
+require 'posterous_api/version'
 require 'httparty'
 
 module Posterous
