@@ -13,7 +13,7 @@ module Posterous
 
     # Get the primary site from a user
     #
-    def user_primary_site_uri 
+    def user_primary_site_uri
       @user_primary_site_uri ||= "#{base_uri}/api/2/users/me/sites/primary"
     end
 

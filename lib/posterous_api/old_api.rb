@@ -5,11 +5,11 @@
 module Posterous
   module OldAPI
     include BaseURI
-    
+
     def get_all_sites_uri
       @get_all_sites_uri ||= "#{base_uri}/getsites"
     end
-    
+
     # The get tags uri to get all the tags
     #
     # Fields:
@@ -60,6 +60,6 @@ module Posterous
     def update_post_uri
       @update_post_uri ||= "#{base_uri}/updatepost"
     end
-    
+
   end
 end
